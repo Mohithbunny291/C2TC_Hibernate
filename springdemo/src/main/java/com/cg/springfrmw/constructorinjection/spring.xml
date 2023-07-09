@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xmlns:c="http://www.springframework.org/schema/c"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean class="com.cg.springfrmw.constructorinjection.Certificate" name="certi" c:nameString="Java for Android"/>
+
+<bean class="com.cg.springfrmw.constructorinjection.Person" name="person">
+	<constructor-arg>
+		<value>Mohith</value>
+	</constructor-arg>	
+	<constructor-arg value="100020"/>
+	<constructor-arg ref="certi"/>
+	<constructor-arg>
+		<list>
+			<value>Hi</value>
+			<value>Hello</value>
+			<value>World</value>
+		</list>
+	</constructor-arg>
+</bean>
+
+<bean name="Add" class="com.cg.springfrmw.constructorinjection.Addition" c:a = "102" c:b = "300">
+	
+<!--	<constructor-arg value="100" type="double" index="1"/>-->
+<!--	<constructor-arg value="500" type="double" index="0"/>	-->
+	
+</bean>
+
+</beans>
+
+
+<!--<bean class="com.cg.springfrmw.constructorinjection.Certificate" name="certi" p:nameString="Java for Android"/>-->
+
+<!--<bean class="com.cg.springfrmw.constructorinjection.Person">-->
+<!--	<property name="nameString" value="Mohith"></property>-->
+<!--	<property name="personId" value="10012"></property>-->
+<!--	<property name="certificate">-->
+<!--		<ref bean="certi"/>-->
+<!--	</property>-->
+<!--	<property name="list">-->
+<!--		<list>-->
+<!--			<value></value>-->
+<!--		</list>-->
+<!--	</property>-->
+<!--</bean>-->
+
+
+<!--</beans>-->

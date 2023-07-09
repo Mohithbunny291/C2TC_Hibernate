@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--value as a tag/element-->
+
+<bean class="com.cg.springfrmw.Student" name="student">
+	
+	<property name="studentId">
+		<value>100020</value>
+	</property>
+	
+	<property name="studentName">
+		<value>Ram</value>
+	</property>
+	
+	<property name="studentAddress">
+		<value>Heaven</value>
+	</property>
+</bean>
+
+<!--Value as a attribute-->
+
+<bean class="com.cg.springfrmw.Student" name="student1">
+	
+	<property name="studentId" value="100102" />
+	
+	<property name="studentName" value="Mohith" />
+		
+	<property name="studentAddress" value="Anantapur" />
+</bean>
+
+<!--This is our 2nd Bean-->
+
+<bean class="com.cg.springfrmw.Student" name="student2">
+	
+	<property name="studentId" value="100101" />
+	
+	<property name="studentName" value="Rohith" />
+		
+	<property name="studentAddress" value="Anantapur" />
+</bean>
+
+<!--P schema-->
+
+<bean class="com.cg.springfrmw.Student" name="student3" p:studentId="100013" p:studentName="Geetha" p:studentAddress="Delhi"/>
+
+</beans>
